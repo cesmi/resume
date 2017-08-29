@@ -1,0 +1,121 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{mathptmx}
+
+\begin{document}
+
+\setlength{\parskip}{1mm}
+\pagenumbering{gobble}
+
+\newcommand{\name}[1]{
+  \begin{center} \LARGE \textbf{#1} \end{center}
+}
+
+\newcommand{\contact}[1]{
+  \begin{center} \large #1 \end{center}
+}
+
+\newcommand{\sectiontitle}[1]{
+  \rule{\columnwidth}{1pt}
+  \par\nointerlineskip
+  { \large \textbf{#1} }
+  \par\nointerlineskip
+  \rule{\columnwidth}{3pt}\par
+}
+
+\newcommand{\employer}[2]{
+  \noindent \textbf{#1} \hfill \textbf{#2} \par
+}
+
+\newcommand{\job}[2]{
+  \noindent \textit{#1} \hfill #2 \par
+}
+
+\newcommand{\bullettitle}[1]{
+  \textit{#1}:
+}
+
+\newenvironment{bullets}{
+  \begin{itemize}
+}{
+  \end{itemize}
+  \vspace{0.05in}
+}
+
+\name{CHRISTIAN SMITH}
+\contact{cesm@umich.edu \textbar \hspace{0.1mm} Allen Park, MI 48101 \textbar \hspace{0.1mm} 734-308-5175}
+
+\sectiontitle{EDUCATION}
+
+\employer{University of Michigan}{Ann Arbor, MI}
+\job{M.S.E. in Computer Science}{December 2018}
+\job{B.S.E. in Computer Science, Minor in Mathematics}{December 2017}
+\begin{bullets}
+  \item \bullettitle{GPA} 4.00/4.00
+  \item \bullettitle{Coursework} Object-Oriented and Advanced Programming, Introduction to Operating Systems,
+        Web Databases and Information Systems, Introduction to Computer Security, Database Management Systems,
+        Data Structures and Algorithms
+  \item \bullettitle{Awards} Eta Kappa Nu EECS Honor Society, EECS Scholar Award, College of Engineering
+      Dean's List
+\end{bullets}
+
+\sectiontitle{WORK EXPERIENCE}
+
+\employer{Allston Trading}{Chicago, IL}
+\job{Software Developer Intern}{May 2017 -- Jul. 2017}
+\begin{bullets}
+  \item Developed a high performance, real time, tick level charting library using OpenGL bindings for Java.
+        The library is used daily by traders to view market data and is capable of rendering millions of points
+        at framerates several times higher than the charting library it replaced.
+  \item Wrote a limit order book server in C++ for testing internal trading applications. The server communicates
+        with trading clients via the FIX protocol, and with a web client that can be used to manually accept, fill,
+        etc. orders using WebSockets.
+  \item Created a C++ server that exposes the functions and callbacks of an internal trading framework to clients
+        via WebSockets.
+  \item Built a web client using React and Redux to provide a GUI for the two C++ servers mentioned above. The client
+        can display market data in real time and allows developers to test an internal trading framework using a GUI
+        in a web browser.
+\end{bullets}
+
+\employer{University of Michigan -- EECS Department}{Ann Arbor, MI}
+\job{Instructional Aide for EECS 482 (Introduction to Operating Systems)}{Jan. 2017 -- Present}
+\begin{bullets}
+  \item Lead weekly discussion sessions of approximately 30 students intended to review and clarify material
+        from lectures.
+  \item Hold regular office hours to assist students in exam preparation and completion of programming projects.
+  \item Answer questions on an online course discussion board, where over 50 questions are posted per day
+        new project deadlines.
+\end{bullets}
+
+\employer{University of Michigan -- Climate and Space Sciences and Engineering Department}{Ann Arbor, MI}
+\job{Web Development Intern}{Apr. 2016 -- Dec. 2016}
+\begin{bullets}
+  \item Created a prototype for an educational browser game in which users attempt to reproduce a given wind
+        pattern by repositioning air pressure points on a map.
+  \item Designed and implemented the front-end of the game using web technologies such as React, Redux, and
+        HTML5 canvas.
+  \item Wrote and deployed a Node.js and MySQL back-end for the game which manages user accounts, scenarios
+        for players to attempt to recreate, and high scores or each scenarios.
+\end{bullets}
+
+\employer{University of Michigan -- Computer Aided Engineering Network}{Ann Arbor, MI}
+\job{Hotline Consultant}{Feb. 2016 -- Dec. 2016}
+\begin{bullets}
+  \item Created a web-based digital signage display to show upcoming hours of operation and service status using
+        HTML, CSS, and JavaScript, and configured a Raspberry Pi to run the display in a web browser.
+  \item Wrote a Chrome extension to automatically refresh the helpdesk's internal ticketing website, search the
+        HTML document for new tickets, and push desktop notifications when new tickets are present.
+  \item Assisted student and faculty users with computer labs, software, and user accounts by phone, email, live
+        chat, and in person.
+\end{bullets}
+
+\sectiontitle{SKILLS}
+\begin{bullets}
+  \item \bullettitle{Languages} C++, Python, JavaScript, HTML, CSS, SQL
+  \item \bullettitle{Technologies} Git, Node.js, Express, React, Redux, ES6, JOGL, WebSockets
+  \item \bullettitle{Operating Systems} Windows, Linux
+\end{bullets}
+
+\end{document}

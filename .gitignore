@@ -1,0 +1,6 @@
+*.aux
+*.log
+*.synctex.gz
+
+*.pyc
+__pycache__
